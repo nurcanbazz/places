@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.card-container {
+    display:flex;
+    flex-wrap: wrap;                      /*ekran daraldıkça kartları aşağı satıra atar. */
+    justify-content: space-evenly;        /*kartlar arasında eşit boşluk bırakır.*/
+}
+
+.cards {
+    background-color: black;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin:1rem;
+    position:relative;
+    overflow: hidden;            /*içeriğin dışarı taşmasını engellemek için kullanılır.*/
+}
+
+.title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    padding:1rem;
+}
+
+.title h2 {
+    margin: 0;
+    color: white;
+}
+
+.cards img {
+    object-fit:cover;
+    width: 350px;
+    height: 250px;
+    border-radius: 7px;
+    filter: grayscale(0%)       /*kartın üzerine gelmeden filter %0 olsun. */
+}
+
+.cards img:hover {
+    filter: grayscale(100%);   /*kartın üzerine gelince filter %100  olsun*/
+}
+
+.card-over {
+    position:absolute;
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:1rem;
+    transform: translateY(100%);              /* yazıyı y ekseninde kaydırır.*/ 
+    transition: transform 0.7s ease-in-out;  /* 0.7 saniyede içeriği yavaşlatarak çıkar.*/
+}
+
+.cards:hover .card-over {
+    transform: translateY(0%);
+}
+
+
