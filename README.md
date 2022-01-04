@@ -1,4 +1,4 @@
-https://tour-place.netlify.app
+You can view the project via this link: https://tour-place.netlify.app
 
 
 # Getting Started with Create React App
